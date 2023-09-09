@@ -15,9 +15,9 @@ Este repositorio contiene todos los proyectos y tareas del curso CS50-IA. Cada p
 
 ## ¿Cómo Navegar? 🧭
 
-1. **Cambiar a la Rama del Proyecto**: Usa el siguiente comando para cambiar a la rama de un proyecto específico.
+1. **Cambiar a la Rama del Proyecto**:
     ```bash
-    git checkout ai50/projects/2023/x/nombre_del_proyecto
+    git checkout ai50/projects/nombre_del_proyecto
     ```
 
 ---
