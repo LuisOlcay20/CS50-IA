@@ -2,7 +2,7 @@
 
 ## Descripción 📚
 
-Este repositorio contiene todos los proyectos y tareas del curso CS50-IA. Cada proyecto estará en su propia rama para cumplir con las indicaciones de los corregidores.
+Este repositorio contiene todos los proyectos y tareas del curso CS50-IA. Cada proyecto estará en su propia rama para cumplir con las indicaciones de los corregidores. De igual forma, se realizarán pull requests al terminar cada proyecto
 
 ---
 
