@@ -8,7 +8,7 @@ names = {}
 
 # Maps person_ids to a dictionary of: name, birth, movies (a set of movie_ids)
 people = {}
-
+branch_check = ()
 # Maps movie_ids to a dictionary of: title, year, stars (a set of person_ids)
 movies = {}
 
@@ -92,8 +92,45 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # TODO
-    raise NotImplementedError
+    # Track the explored states
+    num_explored = 0
+
+    # Initialization of the Frontier
+    start_node = Node(state=source, parent=None, action=None)
+    frontier = QueueFrontier()
+    frontier.add(start_node)
+
+    # Exploration Set
+    exploration = set()
+
+    # Solution Loop
+    while True:
+
+        # No nodes left in the frontier
+        if frontier.empty():
+            return None  # Changed from raising an exception to returning None
+
+        # Choose a node from the frontier and mark it as explored
+        node = frontier.remove()
+        num_explored += 1 
+        exploration.add(node.state)
+
+        # Add neighbors to the frontier
+        neighbors = neighbors_for_person(node.state)
+        for movie_id, person_id in neighbors:
+            if not frontier.contains_state(person_id) and person_id not in exploration:  
+                child = Node(state=person_id, parent=node, action=movie_id)
+
+                # Possible solution
+                if child.state == target:
+                    solution = []  # Initialized as list instead of dict
+                    while child.parent is not None:
+                        solution.append((child.action, child.state))  # Added directly to the list
+                        child = child.parent
+                    solution.reverse()
+                    return solution  
+                
+                frontier.add(child)  # Adding child to frontier
 
 
 def person_id_for_name(name):
