@@ -2,7 +2,7 @@
 
 ## Descripción 📚
 
-Este repositorio contiene todos los proyectos y tareas del curso CS50-IA. Cada proyecto estará en su propia rama para cumplir con las indicaciones de los corregidores. De igual forma, al terminar cada proyecto se realizarán pull requests para que quede en main.
+Este repositorio contiene proyectos y tareas del curso CS50-IA. Cada proyecto estará en su propia rama para cumplir con las indicaciones de los corregidores.
 
 ---
 
@@ -13,14 +13,6 @@ Este repositorio contiene todos los proyectos y tareas del curso CS50-IA. Cada p
 
 ---
 
-## ¿Cómo Navegar? 🧭
-
-1. **Cambiar a la Rama del Proyecto**:
-    ```bash
-    git checkout ai50/projects/nombre_del_proyecto
-    ```
-
----
 
 _Este documento se mantendrá actualizado con cada nuevo proyecto que se añada._
 
